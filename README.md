@@ -3,7 +3,7 @@
 </p>
 
 <h1>Active Directory Infrastructure in Azure (Virtual Machine) for Windows Users</h1>
-This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
+This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines. We are going to create 2 Virtual Machines, one that serves as the domain control and will be name: dc-1 and the second Virtual Machine which will be getting the DNS from the domain control and will name: client-1.<br />
 
 
 <h2>Environments and Technologies Used</h2>
