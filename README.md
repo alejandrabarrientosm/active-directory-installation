@@ -11,7 +11,6 @@ This tutorial outlines the implementation of on-premises Active Directory within
 - Microsoft Azure (Virtual Machines/Compute)
 - Remote Desktop
 - Active Directory Domain Services
-- PowerShell
 
 <h2>Operating Systems Used </h2>
 
@@ -32,7 +31,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Setup Domain Controller in Azure</h2>
 
-First of all we are going to:
+This Virtual Machine will serve as the Domain Control, to which our second Virtual Machine client-1 will connect to get their DNS Host. First of all we are going to create dc-1 which is the Domain control, to do that we are going to follow the next steps:
 
 - Create a Resource Group, called Active-Directory-Lab
   <p align left>
@@ -56,7 +55,7 @@ First of all we are going to:
  <p align left>
  <img width="287" height="446" alt="Screenshot 2025-11-30 144310" src="https://github.com/user-attachments/assets/648347e3-7315-408e-80b9-a9d2e3bef867" />
 
- Just for the purpose of this lab we are going to log into the dc-1 and disable the Windows Firewall (for testing connectivity), using the public IP address, RDC and log in using the credentials previously created
+ Just for the purpose of this lab we are going to log into the dc-1 and disable the Windows Firewall (for testing connectivity), using the public IP address, RDC and log in using the credentials previously created (username: labuser and password: Cyberlab123!)
  <p align left>
  <img width="303" height="183" alt="image" src="https://github.com/user-attachments/assets/bf18190b-88df-4024-ad3b-eac4ea1f3c72" />
  <img width="334" height="247" alt="image" src="https://github.com/user-attachments/assets/27110b56-1534-4a6b-af7d-19dad487c519" />
@@ -101,7 +100,7 @@ On the left pane menu, click on DNS Servers, and change DNS servers from inherit
 <p align left>
 <img width="455" height="292" alt="Screenshot 2025-11-30 152655" src="https://github.com/user-attachments/assets/33679030-f9e7-43ea-a9e2-d13b47cdda61" />
 
-From the Azure Portal, restart Client-1, then log into client-1 using RDC and credentials you previuosly created
+From the Azure Portal, restart Client-1, then log into client-1 using RDP and credentials you previuosly created (username: labuser and password: Cyberlab123!)
 <p align left>
 <img width="304" height="183" alt="image" src="https://github.com/user-attachments/assets/5680f6fb-280d-4271-92e7-63cd57d63a1f" />
 <img width="332" height="243" alt="image" src="https://github.com/user-attachments/assets/4557f543-0ac2-49b0-b2c2-67ded1b3107c" />
@@ -144,7 +143,7 @@ AD DS, click on Next
 Confirmation, click on Restart the destination server automatically if required, yes and click on Install
 <img width="517" height="370" alt="Screenshot 2025-11-30 190538" src="https://github.com/user-attachments/assets/9375f3f2-6e12-4a15-946c-66a2ff8d1527" />
 
-Wait until installation has finished, when installed click on close
+Wait until installation has finished, when installed click on close, follow with the next lab which is Deploying Active Directory.
 <p align left>
 <img width="586" height="416" alt="image" src="https://github.com/user-attachments/assets/ba72f7b1-bd78-42b3-9f17-8ae50d4da8b5" />
 
