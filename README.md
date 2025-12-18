@@ -37,7 +37,7 @@ You must register for an Azure account in order to construct virtual machines. E
 
 <img width="803" height="376" alt="Screenshot 2025-11-25 122156" src="https://github.com/user-attachments/assets/1a9d244a-f522-4dfe-bea5-02f1dc660880" />
 
-Create the Resource Group you choose the correct subscription, name your Resource, choose the region you want to deploy your Virtual Machine and then  click on review and create at the bottom of the page
+Create the Resource Group you choose the correct subscription, name your Resource (Active-Directory-Lab), choose the region (Canada East) you want to deploy your Virtual Machine and then  click on review and create at the bottom of the page
 <p align left>
 <img width="1210" height="1009" alt="Screenshot 2025-11-06 154216" src="https://github.com/user-attachments/assets/e597e939-f874-44ea-af85-be69c1f1e650" />
 
@@ -49,7 +49,7 @@ For this lab we created a Resource Group, called Active-Directory-Lab.
 <p align left>
 <img width="525" height="143" alt="image" src="https://github.com/user-attachments/assets/6e151bf6-09af-4e50-8c1b-9ef0ac38984b" />
 
-- To create a Virtual Network, search in the search bar for Virtual Network, then click on Virtual Network. For this lab we are going to create a Virtual Network and Subnet, called Active-Directory-Vnet
+To create a Virtual Network, search in the search bar for Virtual Network, then click on Virtual Network. For this lab we are going to create a Virtual Network and Subnet, called Active-Directory-Vnet
   <p align left>
   <img width="517" height="145" alt="image" src="https://github.com/user-attachments/assets/52ec7ffb-7493-404d-a0bb-e66bf06fec23" />
   
