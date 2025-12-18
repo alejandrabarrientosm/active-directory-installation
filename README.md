@@ -31,12 +31,23 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>Setup Domain Controller in Azure</h2>
 
-This Virtual Machine will serve as the Domain Control, to which our second Virtual Machine client-1 will connect to get their DNS Host. First of all we are going to create dc-1 which is the Domain control, to do that we are going to follow the next steps:
+This Virtual Machine dc-1 will serve as the Domain Control, to which our second Virtual Machine client-1 will get the local host. First of all we are going to create dc-1 which is the Domain control, to do that we are going to follow the next steps:
 
-- Create a Resource Group, called Active-Directory-Lab
+- To create a Resource Group you can search resource group in the search bar or you can choose it from the dashboard
+<p align left> 
+<img width="729" height="365" alt="Screenshot 2025-11-25 103136" src="https://github.com/user-attachments/assets/a9a8699a-1e32-483c-b8ff-e2da9179601e" />
+
+<img width="803" height="376" alt="Screenshot 2025-11-25 122156" src="https://github.com/user-attachments/assets/1a9d244a-f522-4dfe-bea5-02f1dc660880" />
+
+To create the Resource Group you choose the correct subscription, name your Resource, choose the region you want to deploy your Virtual Machine and then  click on review and create at the bottom of the page
+<p align left>
+<img width="1210" height="1009" alt="Screenshot 2025-11-06 154216" src="https://github.com/user-attachments/assets/e597e939-f874-44ea-af85-be69c1f1e650" />
+
+  - For this lab we created a Resource Group, called Active-Directory-Lab.
   <p align left>
   <img width="525" height="143" alt="image" src="https://github.com/user-attachments/assets/6e151bf6-09af-4e50-8c1b-9ef0ac38984b" />
-- Create a Virtual Network and Subnet, called Active-Directory-Vnet
+
+- To create a Virtual NetworkCreate a Virtual Network and Subnet, called Active-Directory-Vnet
   <p align left>
   <img width="517" height="145" alt="image" src="https://github.com/user-attachments/assets/52ec7ffb-7493-404d-a0bb-e66bf06fec23" />
 - Create the Domain Controller VM (Windows Server 2022) named “DC-1”
