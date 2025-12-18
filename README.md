@@ -5,6 +5,9 @@
 <h1>Active Directory Infrastructure in Azure (Virtual Machine) for Windows Users</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines. We are going to create 2 Virtual Machines, one that serves as the domain control and will be name: dc-1 and the second Virtual Machine which will be getting the DNS from the domain control and will name: client-1.<br />
 
+<h2>Video Demonstration</h2>
+
+- ### [Youtube: Creating Windows and Linux Virtual Machines](https://www.youtube.com/watch?v=ISIau7bI14E) 
 
 <h2>Environments and Technologies Used</h2>
 
@@ -19,19 +22,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
+- Register account in Azure
+- Create a Resource Group
 - Setup Domain Controller in Azure
 - Setup Client-1 in Azure
 - Install Active Directory
 
-
-<p align center>  
-<h2>Preparing Active Directory Infrastructure in Azure and Configuration Steps</h2>
-<p>
-<img width="271" height="227" alt="image" src="https://github.com/user-attachments/assets/2c58d64a-b973-44f7-8991-1553b72f62b2" />
-
-<h2>Setup Domain Controller in Azure</h2>
-
-This Virtual Machine dc-1 will serve as the Domain Control, to which our second Virtual Machine client-1 will get the local host. First of all we are going to create dc-1 which is the Domain control, to do that we are going to follow the next steps:
+<h2>Installation Steps</h2>
+You must register for an Azure account in order to construct virtual machines. Examine the various alternatives that best fit your company or the projects you are working on. After creating your account you can create a Resource Group. First you have to create Resource Group, to start you can click in the search bar or click <img width="47" height="16" alt="image" src="https://github.com/user-attachments/assets/03be3787-9799-43fe-8ada-89b456bab4c3" />
 
 - To create a Resource Group you can search resource group in the search bar or you can choose it from the dashboard
 <p align left> 
@@ -39,7 +37,7 @@ This Virtual Machine dc-1 will serve as the Domain Control, to which our second 
 
 <img width="803" height="376" alt="Screenshot 2025-11-25 122156" src="https://github.com/user-attachments/assets/1a9d244a-f522-4dfe-bea5-02f1dc660880" />
 
-To create the Resource Group you choose the correct subscription, name your Resource, choose the region you want to deploy your Virtual Machine and then  click on review and create at the bottom of the page
+Create the Resource Group you choose the correct subscription, name your Resource, choose the region you want to deploy your Virtual Machine and then  click on review and create at the bottom of the page
 <p align left>
 <img width="1210" height="1009" alt="Screenshot 2025-11-06 154216" src="https://github.com/user-attachments/assets/e597e939-f874-44ea-af85-be69c1f1e650" />
 
@@ -55,14 +53,23 @@ For this lab we created a Resource Group, called Active-Directory-Lab.
   <p align left>
   <img width="517" height="145" alt="image" src="https://github.com/user-attachments/assets/52ec7ffb-7493-404d-a0bb-e66bf06fec23" />
   
-- To create a Virtual Machine
-After created the Resource Group you can continue with the second step which is creating a Virtual Machine, to do that you can click again the search bar and look for Virtual Machines or in the dashboard click on Virtual Machines.
-<p align left>
-<img width="586" height="203" alt="Screenshot 2025-11-25 123544" src="https://github.com/user-attachments/assets/429c2ec6-fb03-4ac5-826e-e3c874c3e540" />
 
-Choose the first option
-<p align left> 
-<img width="686" height="386" alt="Screenshot 2025-11-25 123917" src="https://github.com/user-attachments/assets/85acb37f-f7e0-42f5-b547-0f214d793d70" />
+<p align center>  
+<h2>Preparing Active Directory Infrastructure in Azure and Configuration Steps</h2>
+<p>
+<img width="271" height="227" alt="image" src="https://github.com/user-attachments/assets/2c58d64a-b973-44f7-8991-1553b72f62b2" />
+
+<h2>Setup Domain Controller in Azure</h2>
+
+This Virtual Machine dc-1 will serve as the Domain Control, to which our second Virtual Machine client-1 will get the local host. First of all we are going to create dc-1 which is the Domain control, to do that we are going to follow the next steps:
+
+- After created the Resource Group you can continue with the second step which is creating a Virtual Machine, to do that you can click again the search bar   and look for Virtual Machines or in the dashboard click on Virtual Machines.
+  <p align left>
+  <img width="586" height="203" alt="Screenshot 2025-11-25 123544" src="https://github.com/user-attachments/assets/429c2ec6-fb03-4ac5-826e-e3c874c3e540" />
+
+  Choose the first option
+  <p align left> 
+  <img width="686" height="386" alt="Screenshot 2025-11-25 123917" src="https://github.com/user-attachments/assets/85acb37f-f7e0-42f5-b547-0f214d793d70" />
 
 Put in the appropriate subscription, in the resource group (Active-Directory-Lab) click on the one you just created, Choose a name for your Virtual Machine (Windows Server 2022), for Region choose the same you use in the Resource Group (Canada East), for Image use Windows Server 2022. Picture is just for reference
 </p>
@@ -82,10 +89,8 @@ Click next for Network, then click on Review + Create
 <img width="393" height="455" alt="Screenshot 2025-11-25 133817" src="https://github.com/user-attachments/assets/6828c53e-21a4-460a-944f-655a575b8e18" />
 
 After validation passed, click on Create at the bottom of the page to initialize deployment of the Virtual Machine
-
 <p align left>
 <img width="451" height="454" alt="Screenshot 2025-11-25 134704" src="https://github.com/user-attachments/assets/413c969e-8f81-45de-a779-148ac91090c5" />
-
 
 - And that's how you create the Domain Controller Virtual Machine with Windows Server 2022 named “DC-1”
   <p align left>
